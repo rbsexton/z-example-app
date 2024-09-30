@@ -1,0 +1,14 @@
+identifier: tm4c129x_dk
+name: TM4C129X_DK
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 256
+flash: 1024
+supported:
+  - gpio
+  - netif:eth
+vendor: ti

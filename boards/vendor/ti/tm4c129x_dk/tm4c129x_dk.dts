@@ -1,0 +1,59 @@
+/*
+ * Copyright (c) 2021 SILA Embedded Solutions GmbH
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+
+/*
+#include <st/h7/stm32h735Xg.dtsi>
+#include <st/h7/stm32h735igkx-pinctrl.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+*/ 
+
+
+/*
+#include <arm/ti/lm3s6965.dtsi>
+*/
+
+#include <arm/ti/tm4c129xnc.dtsi>
+
+/ {
+	model = "TI TM4C129X_DK";
+	compatible = "ti,tm4c129xnc";
+
+    chosen {
+        zephyr,sram       = &sram0;
+        zephyr,flash      = &flash0;
+        zephyr,console    = &uart0;
+        zephyr,shell-uart = &uart0;
+    };
+};
+
+&uart0 {
+	status = "okay";
+	current-speed = <115200>;
+};
+
+&uart1 {
+	status = "okay";
+	current-speed = <115200>;
+};
+
+&uart2 {
+	status = "okay";
+	current-speed = <115200>;
+};
+
+&gpion {
+	status = "okay";
+};
+
+&gpioq {
+	status = "okay";
+};
+
+
+
+

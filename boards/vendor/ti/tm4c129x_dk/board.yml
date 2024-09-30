@@ -1,0 +1,6 @@
+board:
+  name: tm4c129x_dk
+  vendor: TI
+  socs:
+#    - name: ti_lm3s6965
+     - name: ti_tm4c129xnc

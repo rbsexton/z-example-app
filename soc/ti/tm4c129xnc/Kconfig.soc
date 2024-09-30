@@ -1,0 +1,10 @@
+# Copyright (c) 2014-2015 Wind River Systems, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_TI_TM4C129XNC
+	bool
+	help
+		TI TM4C129XNC
+
+config SOC
+	default "ti_tm4c129xnc" if SOC_TI_TM4C129XNC

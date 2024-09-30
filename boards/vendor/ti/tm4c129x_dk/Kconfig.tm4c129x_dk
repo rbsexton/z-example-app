@@ -1,0 +1,6 @@
+# Copyright (c) 2021 SILA Embedded Solutions GmbH
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_TM4C129X_DK
+	select SOC_TI_TM4C129XNC
+# 	select SOC_TI_LM3S6965
