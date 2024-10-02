@@ -15,7 +15,7 @@
 
 #include "soc.h"
 
-#ifdef CONFIG_UART_STELLARIS
+#ifdef CONFIG_UART_TIVA
 #include <zephyr/drivers/uart.h>
 
 // Addresses from TM4C129XNCZAD data sheet.
@@ -53,7 +53,7 @@
 
 static int uart_tiva_init(void)
 {
-#ifdef CONFIG_UART_STELLARIS_PORT_0
+#ifdef CONFIG_UART_TIVA_PORT_0
 
 // CHEATING FOR BRING-UP.  Assume that we're on PA0/PA1 
 // BRD = BRDI + BRDF = UARTSysClk / (ClkDiv * Baud Rate) 
@@ -78,37 +78,37 @@ static int uart_tiva_init(void)
 
 #endif
 
-#ifdef CONFIG_UART_STELLARIS_PORT_1
+#ifdef CONFIG_UART_TIVA_PORT_1
 	RCGCUART |= RCGCUART_UART1_EN;
 	SCGCUART |= SCGCUART_UART1_EN;
 #endif
 
-#ifdef CONFIG_UART_STELLARIS_PORT_2
+#ifdef CONFIG_UART_TIVA_PORT_2
 	RCGCUART |= RCGCUART_UART2_EN;
 	SCGCUART |= SCGCUART_UART2_EN;
 #endif
 
-#ifdef CONFIG_UART_STELLARIS_PORT_3
+#ifdef CONFIG_UART_TIVA_PORT_3
 	RCGCUART |= RCGCUART_UART3_EN;
 	SCGCUART |= SCGCUART_UART4_EN;
 #endif
 
-#ifdef CONFIG_UART_STELLARIS_PORT_4
+#ifdef CONFIG_UART_TIVA_PORT_4
 	RCGCUART |= RCGCUART_UART4_EN;
 	SCGCUART |= SCGCUART_UART4_EN;
 #endif
 
-#ifdef CONFIG_UART_STELLARIS_PORT_5
+#ifdef CONFIG_UART_TIVA_PORT_5
 	RCGCUART |= RCGCUART_UART5_EN;
 	SCGCUART |= SCGCUART_UART5_EN;
 #endif
 
-#ifdef CONFIG_UART_STELLARIS_PORT_6
+#ifdef CONFIG_UART_TIVA_PORT_6
 	RCGCUART |= RCGCUART_UART6_EN;
 	SCGCUART |= SCGCUART_UART6_EN;
 #endif
 
-#ifdef CONFIG_UART_STELLARIS_PORT_7
+#ifdef CONFIG_UART_TIVA_PORT_7
 	RCGCUART |= RCGCUART_UART7_EN;
 	SCGCUART |= SCGCUART_UART7_EN;
 #endif
@@ -118,7 +118,7 @@ static int uart_tiva_init(void)
 
 SYS_INIT(uart_tiva_init, EARLY, CONFIG_KERNEL_INIT_PRIORITY_DEVICE);
 
-#endif /* CONFIG_UART_STELLARIS */
+#endif /* CONFIG_UART_TIVA */
 
 // FIXME.  This is definately wrong.  The Tiva has a different 
 // Ethernet IP.
