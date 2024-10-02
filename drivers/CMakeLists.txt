@@ -8,4 +8,4 @@ add_subdirectory_ifdef(CONFIG_BLINK blink)
 add_subdirectory_ifdef(CONFIG_SENSOR sensor)
 
 # UART Drivers.
-add_subdirectory_ifdef(CONFIG_UART_TIVA serial)
+add_subdirectory(serial)
