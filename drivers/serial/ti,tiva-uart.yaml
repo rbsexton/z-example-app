@@ -1,0 +1,12 @@
+description: TI Tiva UART
+
+compatible: "ti,tiva-uart"
+
+include: uart-controller.yaml
+
+properties:
+  reg:
+    required: true
+
+  interrupts:
+    required: true
