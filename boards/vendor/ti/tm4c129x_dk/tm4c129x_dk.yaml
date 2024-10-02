@@ -9,6 +9,7 @@ toolchain:
 ram: 256
 flash: 1024
 supported:
+  - uart
   - gpio
   - netif:eth
 vendor: ti
